@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * SUMOHeavy_BingTracking
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@sumoheavy.com so we can send you a copy immediately.
+ *
+ * @category   SUMOHeavy
+ * @package    SUMOHeavy_BingTracking
+ * @copyright  Copyright 2013 SUMO Heavy Industries, LLC
+ * @license    http://opensource.org/licenses/osl-3.0.php
+ * @author     Sean Kennedy <support@sumoheavy.com>
+ */
+-->
+<config>
+    <tabs>
+        <sumoheavy translate="label" module="sumoheavy_bingtracking">
+            <label>SUMO Heavy</label>
+            <sort_order>999999999</sort_order>
+        </sumoheavy>
+    </tabs>
+    <sections>
+        <sumoheavy_bingtracking translate="label" module="sumoheavy_bingtracking">
+            <label>Bing Tracking</label>
+            <tab>sumoheavy</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <expanded>true</expanded>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <domain_id translate="label">
+                            <label>Bing Domain ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </domain_id>
+                        <ads_guid translate="label">
+                            <label>Bing Ads-defined GUID</label>
+                            <comment><![CDATA[This is required for the non-javascript snippet to function correctly. For more information, please see <a href='http://msdn.microsoft.com/en-US/library/adcenter-campaign-management-campaign-analytics-scripts.aspx#variable'>Microsoft's documentation</a>.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ads_guid>
+                    </fields>
+                </settings>
+                <cart translate="label">
+                    <label>Cart</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Cart Tracking Enabled</label>
+                            <comment>Should bing track cart views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Cart Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </cart>
+                <category translate="label">
+                    <label>Category</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Category Tracking Enabled</label>
+                            <comment>Should bing track category views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Category Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </category>
+                <checkout_success translate="label">
+                    <label>Checkout Success</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Checkout Success Tracking Enabled</label>
+                            <comment>Should bing track checkout success views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Checkout Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </checkout_success>
+                <homepage translate="label">
+                    <label>Homepage</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Homepage Tracking Enabled</label>
+                            <comment>Should bing track homepage views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Homepage Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </homepage>
+                <product translate="label">
+                    <label>Product</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Product Tracking Enabled</label>
+                            <comment>Should bing track product views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Product Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </product>
+                <registration translate="label">
+                    <label>Registration</label>
+                    <expanded>true</expanded>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Registration Tracking Enabled</label>
+                            <comment>Should bing track registration views?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <action_id translate="label">
+                            <label>Registration Action ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </action_id>
+                    </fields>
+                </registration>
+            </groups>
+        </sumoheavy_bingtracking>
+    </sections>
+</config>
