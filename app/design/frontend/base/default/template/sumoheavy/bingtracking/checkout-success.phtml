@@ -45,7 +45,7 @@ if(Mage::getStoreConfig('sumoheavy_bingtracking/checkout_success/action_id')
                 dedup: "1",
                 domainId: "<?php echo $domainId; ?>",
                 type: "1",
-                revenue: <?php echo $this->helper('sumoheavy_pagetracking')->getLastOrderTotal(); ?>,
+                revenue: <?php echo $this->helper('sumoheavy_bingtracking')->getLastOrderTotal(); ?>,
                 actionid: "<?php echo $actionId; ?>"
             }
         )
